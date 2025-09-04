@@ -4,17 +4,20 @@ This guide provides instructions for accessing the Amazon Bedrock Agentic AI Wor
 
 ## Setup Instructions
 
-Follow these steps in your SageMaker Studio JupyterLab environment:
+### 1. Open Terminal in SageMaker Studio
 
-### 1. Clone the Workshop Repository
+Open a terminal in SageMaker Studio:
+- Navigate to File → New → Terminal
 
-Open a terminal in SageMaker Studio (File → New → Terminal) and run:
+### 2. Clone the Workshop Repository
+
+In the terminal, run:
 
 ```bash
 git clone https://github.com/kwangwl/amazon_bedrock_agentic_ai_workshop.git /home/sagemaker-user/workshop
 ```
 
-### 2. Download the Streamlit Access Script
+### 3. Download the Streamlit Access Script
 
 This script will generate the URL needed to access the Streamlit application running in your SageMaker Studio environment:
 
@@ -23,7 +26,7 @@ curl "https://raw.githubusercontent.com/rajavaid77/agentic-ai-workshop/refs/head
 chmod +x /home/sagemaker-user/get_streamlit_url.sh
 ```
 
-### 3. Generate Streamlit Access URL
+### 4. Generate Streamlit Access URL
 
 Run the script to generate your unique Streamlit application URL:
 
