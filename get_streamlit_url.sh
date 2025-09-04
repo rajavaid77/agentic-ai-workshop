@@ -1,10 +1,9 @@
 #!/bin/sh
 CURRENTDATE=`date +"%Y-%m-%d %T"`
 RED='\033[0;31m'
-GREEN='\033[1;32m'
+GREEN='\033[0;32m'
+BOLD='\033[1m'
 NC='\033[0m'
-
-echo "*** SageMaker JupyterLab URL Generator for Port 8080 ***"
 
 # Fixed port number
 PORT=8080
@@ -15,7 +14,7 @@ if [ -f /opt/amazon/sagemaker/metadata/resource-metadata.json ]; then
 elif [ -f /opt/ml/metadata/resource-metadata.json ]; then
     METADATA_PATH="/opt/ml/metadata/resource-metadata.json"
 else
-    echo "${RED}${CURRENTDATE}: [ERROR]:${NC} Cannot find resource metadata file"
+    echo -e "${RED}${CURRENTDATE}: [ERROR]:${NC} Cannot find resource metadata file" >&2
     exit 1
 fi
 
@@ -41,7 +40,7 @@ else
     SPACE_URL=$(aws sagemaker describe-space --domain-id "$DOMAIN_ID" --space-name "$SPACE_NAME" | jq -r '.Url' 2>/dev/null)
     
     if [ "x$SPACE_URL" = "x" ] || [ "$SPACE_URL" = "null" ]; then
-        echo "${RED}${CURRENTDATE}: [ERROR]:${NC} Failed to retrieve Space URL"
+        echo -e "${RED}${CURRENTDATE}: [ERROR]:${NC} Failed to retrieve Space URL" >&2
         exit 1
     fi
     
@@ -52,8 +51,16 @@ else
     link="${BASE_URL}/jupyterlab/default/proxy/${PORT}/"
 fi
 
-# Display only the final URL without using -e flag
-# Also remove color codes since they require -e to work
+# Print a header and separator
+echo "\n${BOLD}=== STREAMLIT APPLICATION URL ===${NC}\n"
+
+# Display the URL in green and bold
+echo "${GREEN}${BOLD}${link}${NC}"
+
+# Print a separator
+echo "\n${BOLD}=================================${NC}\n"
+
+# Print the plain URL without formatting (for easy copying)
 echo "${link}"
 
 exit 0
