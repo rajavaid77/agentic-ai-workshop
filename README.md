@@ -1,28 +1,45 @@
-## Workround Restrictions on Public IP access
+# Workshop Access Guide: SageMaker Studio for Amazon Bedrock Agentic AI Workshop
 
-As a workaround to the restrictions on accessing public ip needed to run remote VS Code IDE, we would perform the workshop using SageMaker AI Studio. 
+This guide provides instructions for accessing the Amazon Bedrock Agentic AI Workshop using SageMaker Studio, which serves as an alternative to remote VS Code IDE when public IP access is restricted.
 
-Follow these steps using the Terminal (File --> New --> Terminal) in your SageMaker Studio JupyterLab.
+## Setup Instructions
 
+Follow these steps in your SageMaker Studio JupyterLab environment:
 
-### Clone the repo for the workshop
+### 1. Clone the Workshop Repository
 
-```bash
-  git clone https://github.com/kwangwl/amazon_bedrock_agentic_ai_workshop.git /home/sagemaker-user/workshop
-```
-
-### Download script 
-We download a sample bash script that will retrieve the url that we can use to access Streamlit app running inside the SageMaker AI Studio environment.
+Open a terminal in SageMaker Studio (File → New → Terminal) and run:
 
 ```bash
-  curl "https://raw.githubusercontent.com/rajavaid77/agentic-ai-workshop/refs/heads/main/get_streamlit_url.sh" -o "/home/sagemaker-user/get_streamlit_url.sh"
-  chmod +x /home/sagemaker-user/get_streamlit_url.sh
-
+git clone https://github.com/kwangwl/amazon_bedrock_agentic_ai_workshop.git /home/sagemaker-user/workshop
 ```
 
-### Test the script 
-Run the script to see if it output the url to access streamlit app
+### 2. Download the Streamlit Access Script
+
+This script will generate the URL needed to access the Streamlit application running in your SageMaker Studio environment:
 
 ```bash
-  ~/get_streamlit_url.sh
+curl "https://raw.githubusercontent.com/rajavaid77/agentic-ai-workshop/refs/heads/main/get_streamlit_url.sh" -o "/home/sagemaker-user/get_streamlit_url.sh"
+chmod +x /home/sagemaker-user/get_streamlit_url.sh
 ```
+
+### 3. Generate Streamlit Access URL
+
+Run the script to generate your unique Streamlit application URL:
+
+```bash
+~/get_streamlit_url.sh
+```
+
+Copy the generated URL to access the workshop's Streamlit interface.
+
+## Troubleshooting
+
+If you encounter issues:
+- Verify your SageMaker Studio instance has the necessary permissions
+- Ensure all commands are executed in the correct order
+- Check that the repository URL is accessible from your environment
+
+## Additional Resources
+
+For more information about the workshop content, refer to the documentation in the cloned repository.
