@@ -1,4 +1,4 @@
-# Workshop Access Guide: SageMaker Studio for Amazon Bedrock Agentic AI Workshop
+# Access Streamlit App running in SageMaker Studio
 
 This guide provides instructions for accessing the Amazon Bedrock Agentic AI Workshop using SageMaker Studio, which serves as an alternative to remote VS Code IDE when public IP access is restricted.
 
