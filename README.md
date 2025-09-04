@@ -9,12 +9,12 @@ This guide provides instructions for accessing the Amazon Bedrock Agentic AI Wor
 Open a terminal in SageMaker Studio:
 - Navigate to File → New → Terminal
 
-### 2. Clone the Workshop Repository
+### 2. Download the Workshop assets
 
 In the terminal, run:
 
 ```bash
-git clone https://github.com/kwangwl/amazon_bedrock_agentic_ai_workshop.git /home/sagemaker-user/workshop
+curl "https://ws-assets-prod-iad-r-pdx-f3b3f9f1a7d6a3d0.s3.us-west-2.amazonaws.com/5d74d234-0149-4b82-982a-4c040b85d0f2/workshop_2.zip" -o "/home/ec2-user/workshop.zip"
 ```
 
 ### 3. Download the Streamlit Access Script
