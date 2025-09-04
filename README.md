@@ -20,3 +20,9 @@ We download a sample bash script that will retrieve the url that we can use to a
 
 ```
 
+### Test the script 
+Run the script to see if it output the url to access streamlit app
+
+```bash
+  ~/get_streamlit_url.sh
+```
