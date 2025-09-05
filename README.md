@@ -29,6 +29,7 @@ In the terminal, run:
 ```bash
 curl "https://ws-assets-prod-iad-r-pdx-f3b3f9f1a7d6a3d0.s3.us-west-2.amazonaws.com/5d74d234-0149-4b82-982a-4c040b85d0f2/workshop_2.zip" -o "/home/sagemaker-user/workshop.zip"
 unzip /home/sagemaker-user/workshop.zip -d /home/sagemaker-user/workshop
+
 ```
 -->
 
@@ -40,6 +41,7 @@ In the terminal, run:
 git clone https://github.com/aws-samples/sample-tech-for-trading.git
 mv sample-tech-for-trading/investment_advisor_by_agentic_ai/ ~/workshop
 rm -rf sample-tech-for-trading/
+
 ```
 
 ### 3. Download and run helper script to get JupyterLab proxy url
@@ -50,6 +52,7 @@ This script will generate the URL needed to access the Streamlit application run
 curl "https://raw.githubusercontent.com/rajavaid77/agentic-ai-workshop/refs/heads/main/get_streamlit_url.sh" -o "/home/sagemaker-user/get_streamlit_url.sh"
 chmod +x /home/sagemaker-user/get_streamlit_url.sh
 ~/get_streamlit_url.sh
+
 ```
 
 > [!NOTE]  
