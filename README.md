@@ -42,24 +42,17 @@ mv sample-tech-for-trading/investment_advisor_by_agentic_ai/ ~/workshop
 rm -rf sample-tech-for-trading/
 ```
 
-### 3. Download the Streamlit Access Script
+### 3. Download and run helper script to get JupyterLab proxy url
 
 This script will generate the URL needed to access the Streamlit application running in your SageMaker Studio environment:
 
 ```bash
 curl "https://raw.githubusercontent.com/rajavaid77/agentic-ai-workshop/refs/heads/main/get_streamlit_url.sh" -o "/home/sagemaker-user/get_streamlit_url.sh"
 chmod +x /home/sagemaker-user/get_streamlit_url.sh
-```
-
-### 4. Generate Streamlit Access URL
-
-Run the script to generate your unique Streamlit application URL:
-
-```bash
 ~/get_streamlit_url.sh
 ```
-
-Copy the generated URL to access the workshop's Streamlit interface.
+### 3
+Copy and keep handy, the URL that the script outputs.  You would use this URL to view the streamlit application in the browser when carrying out the lab activities.
 
 ## Troubleshooting
 
