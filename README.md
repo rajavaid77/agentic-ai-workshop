@@ -21,14 +21,17 @@ The workshop participants should follow the instructions in the next section to 
 Open a terminal in SageMaker Studio:
 - Navigate to File → New → Terminal
 
-'### 2. Download the Workshop assets
-'
-'In the terminal, run:
-'
-'```bash
-'curl "https://ws-assets-prod-iad-r-pdx-f3b3f9f1a7d6a3d0.s3.us-west-2.amazonaws.com/5d74d234-0149-4b82-982a-4c040b85d0f2/workshop_2.zip" -o "/home/sagemaker-user/workshop.zip"
-'unzip /home/sagemaker-user/workshop.zip -d /home/sagemaker-user/workshop
-'```
+<!--
+### 2. Download the Workshop assets
+
+In the terminal, run:
+
+```bash
+curl "https://ws-assets-prod-iad-r-pdx-f3b3f9f1a7d6a3d0.s3.us-west-2.amazonaws.com/5d74d234-0149-4b82-982a-4c040b85d0f2/workshop_2.zip" -o "/home/sagemaker-user/workshop.zip"
+unzip /home/sagemaker-user/workshop.zip -d /home/sagemaker-user/workshop
+```
+-->
+
 ### 2. Clone the Workshop repo
 
 In the terminal, run:
