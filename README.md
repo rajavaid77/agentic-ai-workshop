@@ -51,6 +51,7 @@ curl "https://raw.githubusercontent.com/rajavaid77/agentic-ai-workshop/refs/head
 chmod +x /home/sagemaker-user/get_streamlit_url.sh
 ~/get_streamlit_url.sh
 ```
+
  > [!Note] Copy and keep handy, the URL that the script outputs.  You would use this URL to view the streamlit application in the browser when carrying out the lab activities.
  
 
