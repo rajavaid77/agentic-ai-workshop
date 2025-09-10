@@ -60,7 +60,4 @@ echo "${GREEN}${BOLD}${link}${NC}"
 # Print a separator
 echo "\n${BOLD}=================================${NC}\n"
 
-# Print the plain URL without formatting (for easy copying)
-echo "${link}"
-
 exit 0
